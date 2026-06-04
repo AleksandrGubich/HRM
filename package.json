@@ -1,7 +1,6 @@
 {
   "scripts": {
-    "start": "webpack serve",
-    "build": "webpack --mode production"
+    "start": "webpack serve"
   },
   "dependencies": {
     "react": "^19.2.7",
