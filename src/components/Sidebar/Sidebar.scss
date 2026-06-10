@@ -1,0 +1,91 @@
+.navigation {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  z-index: 1;
+  justify-content: space-between;
+  width: 88px;
+  box-shadow: 4px 0 4px rgba(0, 0, 0, 0.08);
+  padding-bottom: 88px;
+
+  .content-tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .show-hide-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-radius: 50px;
+      background-color: white;
+      border: 1px solid #ececec;
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
+      right: -15px;
+      top: 20px;
+    }
+
+    .content-tab {
+      height: 72px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(238, 238, 238);
+      }
+    }
+  }
+
+  .service-tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .service-tab {
+      height: 44px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background-color: inherit;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(238, 238, 238);
+      }
+    }
+  }
+}
+
+.active-option {
+  position: relative;
+  background-color: #fcf3f4;
+
+  svg path {
+    fill: #bc3333;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background-color: #bc3333;
+    border-radius: 0 10px 10px 0;
+  }
+}

@@ -1,0 +1,30 @@
+.user-data {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(238, 238, 238);
+  }
+
+  .user-data-details {
+    .user-name {
+      font-family: "Manrope", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: #353535;
+    }
+    .user-role {
+      font-family: "Manrope", Arial, sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: #767676;
+    }
+  }
+}
