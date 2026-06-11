@@ -1,0 +1,20 @@
+.google-button {
+  width: 358px;
+  height: 60px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #a3a3a3;
+  border-radius: 30px;
+  background-color: #ffffff;
+  cursor: pointer;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #8c8c8c;
+
+  &:hover {
+    background-color: rgb(238, 238, 238);
+  }
+}
