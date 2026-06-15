@@ -10,7 +10,7 @@
   transition: width 0.2s ease;
 
   &.collapsed {
-    width: 70px;
+    width: 50px;
   }
 
   .content-tabs {
@@ -33,6 +33,7 @@
       box-shadow: 0 0 24px rgba(0, 0, 0, 0.14);
       right: -15px;
       top: 20px;
+      cursor: pointer;
     }
 
     .content-tab {

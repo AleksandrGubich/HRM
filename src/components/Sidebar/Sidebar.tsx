@@ -38,7 +38,7 @@ export const Sidebar = () => {
   );
 
   return (
-    <aside className={`navigation ${isSidebarCollapsed ? "Collapsed" : ""}`}>
+    <aside className={`navigation ${isSidebarCollapsed ? "collapsed" : ""}`}>
       <div className="content-tabs">
         <button
           className="show-hide-button"
