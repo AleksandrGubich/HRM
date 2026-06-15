@@ -7,6 +7,11 @@
   width: 88px;
   box-shadow: 4px 0 4px rgba(0, 0, 0, 0.08);
   padding-bottom: 88px;
+  transition: width 0.2s ease;
+
+  &.collapsed {
+    width: 70px;
+  }
 
   .content-tabs {
     position: relative;
