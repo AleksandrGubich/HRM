@@ -1,4 +1,3 @@
-import { courses } from "../../data/courses";
 import { useGetCoursesQuery } from "../../features/courses/coursesApi";
 import { CorporateNav } from "../CorporateNav/CorporateNav";
 import { CourseFilters } from "../CourseFilters/CourseFilters";

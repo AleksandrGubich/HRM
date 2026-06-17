@@ -26,6 +26,15 @@ type CoursesResponse = {
   limit: number;
 };
 
+const mapProductToCourse = (product: Product) => ({
+  id: product.id,
+  title: product.title,
+  type: "Course",
+  category: product.category,
+  studentsAmount: 20,
+  passedAmount: 20,
+});
+
 export const coursesApi = createApi({
   reducerPath: "coursesApi",
 
@@ -54,19 +63,24 @@ export const coursesApi = createApi({
           total: response.total,
           skip: response.skip,
           limit: response.limit,
-
-          courses: response.products.map((product) => ({
-            id: product.id,
-            title: product.title,
-            type: "Course",
-            category: product.category,
-            studentsAmount: 20,
-            passedAmount: 20,
-          })),
+          courses: response.products.map(mapProductToCourse),
         };
+      },
+    }),
+
+    getCourseById: builder.query<Course, number>({
+      query: (id) => ({
+        url: `products/${id}`,
+        params: {
+          select: "id,title,category",
+        },
+      }),
+
+      transformResponse: (product: Product): Course => {
+        return mapProductToCourse(product);
       },
     }),
   }),
 });
 
-export const { useGetCoursesQuery } = coursesApi;
+export const { useGetCoursesQuery, useGetCourseByIdQuery } = coursesApi;
