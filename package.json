@@ -1,6 +1,10 @@
 {
+  "homepage": "https://AleksandrGubich.github.io/HRM",
   "scripts": {
-    "start": "webpack serve"
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
@@ -13,6 +17,7 @@
     "@types/react": "^19.2.16",
     "@types/react-dom": "^19.2.3",
     "css-loader": "^7.1.4",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.7",
     "sass": "^1.100.0",
     "sass-loader": "^17.0.0",

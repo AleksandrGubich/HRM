@@ -2,7 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 
 import { App } from "./App";
-import { BrowserRouter } from "react-router";
+import { HashRouter } from "react-router";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 
@@ -15,9 +15,9 @@ if (!rootElement) {
 createRoot(rootElement).render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </React.StrictMode>,
 );
